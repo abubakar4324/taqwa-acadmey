@@ -50,19 +50,23 @@
             display: inline-block;
             padding: 1rem 2rem;
             border-radius: 9999px;
-            background-color: #06b6d4; /* Electric Cyan */
-            color: #0a0f1d; /* Deep Slate Navy */
+            background-color: #06b6d4;
+            /* Electric Cyan */
+            color: #0a0f1d;
+            /* Deep Slate Navy */
             font-weight: 700;
             font-size: 1rem;
             box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.3);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
         }
+
         .btn-gold:hover {
             background-color: #22d3ee;
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 20px 25px -5px rgba(6, 182, 212, 0.4);
         }
+
         .btn-gold:active {
             transform: scale(0.95);
         }
@@ -78,24 +82,29 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
         }
+
         .btn-outline:hover {
             background-color: #06b6d4;
             color: #0a0f1d;
             box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.2);
             transform: translateY(-3px);
         }
+
         .btn-outline:active {
             transform: scale(0.95);
         }
 
         .card {
-            background-color: #131927; /* Dark slate card background */
+            background-color: #131927;
+            /* Dark slate card background */
             border-radius: 1rem;
             padding: 2rem;
-            border: 1px solid #1e293b; /* Slate 800 */
+            border: 1px solid #1e293b;
+            /* Slate 800 */
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 30px rgba(6, 182, 212, 0.12);
@@ -112,6 +121,7 @@
             font-size: 0.875rem;
             transition: all 0.2s;
         }
+
         .input-field:focus {
             outline: none;
             border-color: transparent;
@@ -122,7 +132,8 @@
             display: block;
             font-size: 0.875rem;
             font-weight: 600;
-            color: #cbd5e1; /* Slate 300 for dark mode readability */
+            color: #cbd5e1;
+            /* Slate 300 for dark mode readability */
             margin-bottom: 0.25rem;
         }
 
@@ -154,38 +165,87 @@
 
         /* Keyframes for floating ambient elements */
         @keyframes float-slow {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(3deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(3deg);
+            }
         }
+
         @keyframes pulse-glow {
-            0%, 100% { opacity: 0.6; transform: scale(1); }
-            50% { opacity: 0.9; transform: scale(1.1); }
+
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.9;
+                transform: scale(1.1);
+            }
         }
+
         @keyframes float-bg-1 {
-            0%, 100% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.95); }
+
+            0%,
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.95);
+            }
         }
+
         @keyframes float-bg-2 {
-            0%, 100% { transform: translate(0px, 0px) scale(1); }
-            50% { transform: translate(-40px, 40px) scale(1.15); }
+
+            0%,
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            50% {
+                transform: translate(-40px, 40px) scale(1.15);
+            }
         }
+
         @keyframes float-bg-3 {
-            0%, 100% { transform: translate(0px, 0px) scale(1); }
-            50% { transform: translate(50px, -30px) scale(0.9); }
+
+            0%,
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            50% {
+                transform: translate(50px, -30px) scale(0.9);
+            }
         }
+
         .animate-float-slow {
             animation: float-slow 6s ease-in-out infinite;
         }
+
         .animate-pulse-glow {
             animation: pulse-glow 8s ease-in-out infinite;
         }
+
         .animate-float-bg-1 {
             animation: float-bg-1 15s ease-in-out infinite;
         }
+
         .animate-float-bg-2 {
             animation: float-bg-2 18s ease-in-out infinite;
         }
+
         .animate-float-bg-3 {
             animation: float-bg-3 20s ease-in-out infinite;
         }
@@ -241,9 +301,15 @@
     <section class="hero-bg relative min-h-screen flex items-center justify-center pt-24 pb-20 overflow-hidden">
 
         <!-- Glowing blobs -->
-        <div class="absolute top-1/4 left-10 w-72 h-72 bg-gold/10 rounded-full blur-[120px] pointer-events-none animate-float-bg-1"></div>
-        <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-indigoBrand/10 rounded-full blur-[120px] pointer-events-none animate-float-bg-2"></div>
-        <div class="absolute top-10 right-1/4 w-60 h-60 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none animate-float-bg-3"></div>
+        <div
+            class="absolute top-1/4 left-10 w-72 h-72 bg-gold/10 rounded-full blur-[120px] pointer-events-none animate-float-bg-1">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-10 w-80 h-80 bg-indigoBrand/10 rounded-full blur-[120px] pointer-events-none animate-float-bg-2">
+        </div>
+        <div
+            class="absolute top-10 right-1/4 w-60 h-60 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none animate-float-bg-3">
+        </div>
 
         <div class="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-6 animate-fade-up">
 
@@ -256,7 +322,9 @@
 
             <!-- Headline -->
             <h1 class="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight">
-                Master <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-cyan-300 to-indigoBrand-light">In-Demand</span> Digital Skills<br class="hidden md:block">
+                Master <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-cyan-300 to-indigoBrand-light">In-Demand</span>
+                Digital Skills<br class="hidden md:block">
                 with Taqwa Science Academy
             </h1>
 
@@ -292,11 +360,9 @@
   ══════════════════════════════════════════════════════════════ -->
     <section id="courses" class="py-24 px-6 bg-navy relative overflow-hidden">
         <!-- Subtle tech grid background -->
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35 pointer-events-none"></div>
-
-        <!-- Floating background blobs -->
-        <div class="absolute top-1/3 -left-20 w-80 h-80 bg-indigoBrand/10 rounded-full blur-[130px] pointer-events-none animate-float-bg-2"></div>
-        <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-gold/10 rounded-full blur-[130px] pointer-events-none animate-float-bg-1"></div>
+        <div
+            class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-35 pointer-events-none">
+        </div>
 
         <div class="max-w-6xl mx-auto relative z-10">
 
@@ -312,7 +378,8 @@
             <div class="grid md:grid-cols-2 gap-10">
 
                 <!-- Course 1: Office Management -->
-                <div class="card group hover:!border-indigoBrand/40 hover:shadow-[0_20px_30px_rgba(99,102,241,0.15)] transition-all duration-300">
+                <div
+                    class="card group hover:!border-indigoBrand/40 hover:shadow-[0_20px_30px_rgba(99,102,241,0.15)] transition-all duration-300">
                     <div
                         class="w-16 h-16 rounded-2xl bg-indigoBrand/10 flex items-center justify-center mb-6 group-hover:bg-indigoBrand transition-all duration-300">
                         <i
@@ -324,21 +391,35 @@
 
                     <h4 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Tools Covered</h4>
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">MS Word</span>
-                        <span class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">MS Excel</span>
-                        <span class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">MS PowerPoint</span>
-                        <span class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">MS Access</span>
-                        <span class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">Email Management</span>
-                        <span class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">Workflow Automation</span>
+                        <span
+                            class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">MS
+                            Word</span>
+                        <span
+                            class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">MS
+                            Excel</span>
+                        <span
+                            class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">MS
+                            PowerPoint</span>
+                        <span
+                            class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">MS
+                            Access</span>
+                        <span
+                            class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">Email
+                            Management</span>
+                        <span
+                            class="px-3 py-1 bg-indigoBrand/10 text-indigoBrand-light text-xs font-semibold rounded-full border border-indigoBrand/20">Workflow
+                            Automation</span>
                     </div>
 
-                    <a href="#enroll" class="btn-outline border-indigoBrand text-indigoBrand hover:bg-indigoBrand hover:text-white">
+                    <a href="#enroll"
+                        class="btn-outline border-indigoBrand text-indigoBrand hover:bg-indigoBrand hover:text-white">
                         Learn More <i class="fa-solid fa-arrow-right ml-1"></i>
                     </a>
                 </div>
 
                 <!-- Course 2: Freelancing & E-Commerce -->
-                <div class="card group hover:!border-gold/40 hover:shadow-[0_20px_30px_rgba(6,182,212,0.15)] transition-all duration-300">
+                <div
+                    class="card group hover:!border-gold/40 hover:shadow-[0_20px_30px_rgba(6,182,212,0.15)] transition-all duration-300">
                     <div
                         class="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold transition-all duration-300">
                         <i
@@ -350,11 +431,19 @@
 
                     <h4 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Platforms Covered</h4>
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Fiverr</span>
-                        <span class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Upwork</span>
-                        <span class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Shopify Store</span>
-                        <span class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Client Acquisition</span>
-                        <span class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Online Earning</span>
+                        <span
+                            class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Fiverr</span>
+                        <span
+                            class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Upwork</span>
+                        <span
+                            class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Shopify
+                            Store</span>
+                        <span
+                            class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Client
+                            Acquisition</span>
+                        <span
+                            class="px-3 py-1 bg-gold/10 text-gold-light text-xs font-semibold rounded-full border border-gold/20">Online
+                            Earning</span>
                     </div>
 
                     <a href="#enroll" class="btn-outline">
@@ -377,8 +466,7 @@
         <div
             class="absolute inset-0 bg-[radial-gradient(circle,rgba(6,182,212,0.07)_1px,transparent_1px)] bg-[length:36px_36px] pointer-events-none">
         </div>
-        <div class="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-[120px] pointer-events-none animate-float-bg-1"></div>
-        <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-indigoBrand/10 rounded-full blur-[130px] pointer-events-none animate-float-bg-3"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div class="relative z-10 max-w-2xl mx-auto">
 
@@ -391,7 +479,8 @@
             </div>
 
             <!-- Form Card -->
-            <div class="bg-navy-light/50 border border-white/5 backdrop-blur-lg rounded-3xl shadow-2xl p-8 md:p-10 relative z-10">
+            <div
+                class="bg-navy-light/50 border border-white/5 backdrop-blur-lg rounded-3xl shadow-2xl p-8 md:p-10 relative z-10">
                 <form id="enrollForm" novalidate class="flex flex-col gap-5">
 
                     <!-- Web3Forms hidden fields -->
@@ -402,7 +491,7 @@
                     <!-- Full Name -->
                     <div>
                         <label for="fullName" class="label">Full Name <span class="text-red-500">*</span></label>
-                        <input type="text" id="fullName" name="fullName" placeholder="e.g. M Abubakar"
+                        <input type="text" id="fullName" name="fullName" placeholder="e.g. MAbubakar "
                             class="input-field" required />
                         <p class="text-red-500 text-xs mt-1 hidden" id="err-fullName">Please enter your full name.</p>
                     </div>
@@ -429,7 +518,8 @@
                     <!-- Course Selection -->
                     <div>
                         <label for="course" class="label">Select Course <span class="text-red-500">*</span></label>
-                        <select id="course" name="course" class="input-field bg-navy-light text-white border-white/10" required>
+                        <select id="course" name="course" class="input-field bg-navy-light text-white border-white/10"
+                            required>
                             <option value="" disabled selected class="bg-navy">-- Choose a Course --</option>
                             <option value="office" class="bg-navy">Office Management</option>
                             <option value="freelancing" class="bg-navy">Freelancing & E-Commerce</option>
